@@ -51,10 +51,22 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
+        await newPage.keyboard.press('Enter');
+        console.log('await newPage.keyboard.press')
+
+        const desiredIndex7 = 7;
+        await clickButtonByIndex(newPage, desiredIndex7);
+        console.log("EEEEEEEEEE");
+        await waitForEnter();
+        console.log("FFFFFFFFFF");
         // Perform the edit function
         // Perform right-click on the specified element
         const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
-        const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
+        // const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
+        const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.<br>1 missing selection'; // Replace with the desired title
+        // (3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.< br > 1 missing selection
+        // const title7 = '(3) Extrude Sketch(1.03)'; // Replace with the desired title
+        // (3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.< br > 1 missing selection
         console.log('Right-clicking on the specified element.');
         const editOptions7 = await performRightClickOptionByTitle(newPage, selector7, title7);
         console.log(editOptions7);
