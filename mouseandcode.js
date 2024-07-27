@@ -22,28 +22,23 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         // Launch browser and navigate to the document
         const newPage = await launchBrowserAndNavigateToDocument(); // Ensure this returns a newPage object
 
-        // NEW SKETCH
-        await newSketch(newPage);
-
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
 
-        const desiredIndex = 6;
-        await clickButtonByIndex(newPage, desiredIndex);
 
-        // Right-click option
-        // const selector = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
-        // const title = '(1) Initial Sketch'; // Replace with the desired title
-        // const selector = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
-        // const title = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
+
+        // const desiredIndex = 6;
+        // await clickButtonByIndex(newPage, desiredIndex);
         const selector = 'div[data-id="XgmGAQ7RqnVg1wa8"]'; // Replace with the appropriate selector
         const title = '(2) Extrude 1(4.00) did not regenerate properly: Select face or sketch region to extrude.'; // Replace with the desired title
 
 
+
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
+
 
 
         // Perform right-click on the specified element
@@ -52,9 +47,11 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log(editOptions3);
 
 
+
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
+
 
 
         // Perform the edit function
@@ -67,7 +64,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         console.log("FFFFFFFFFF");
 
 
-
+        ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
 
         // Perform the edit function
         console.log('performRightClickOptionByTitle')
