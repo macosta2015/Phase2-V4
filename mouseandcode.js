@@ -22,42 +22,28 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         // Launch browser and navigate to the document
         const newPage = await launchBrowserAndNavigateToDocument(); // Ensure this returns a newPage object
 
-        console.log("AAAAAAAAAA");
-        await waitForEnter();
-        console.log("BBBBBBBBBB");
-
-
-
+        //Select index
         // const desiredIndex = 6;
         // await clickButtonByIndex(newPage, desiredIndex);
         const selector = 'div[data-id="XgmGAQ7RqnVg1wa8"]'; // Replace with the appropriate selector
         const title = '(2) Extrude 1(4.00) did not regenerate properly: Select face or sketch region to extrude.'; // Replace with the desired title
 
-
-
         console.log("AAAAAAAAAA");
         await waitForEnter();
         console.log("BBBBBBBBBB");
-
-
 
         // Perform right-click on the specified element
         console.log('Right-clicking on the specified element.');
         const editOptions3 = await performRightClickOptionByTitle(newPage, selector, title);
         console.log(editOptions3);
 
-
-
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
 
-
-
         // Perform the edit function
         console.log('editIntoSketchFunction')
         editIntoSketchFunction(editOptions3, newPage);
-
 
         console.log("EEEEEEEEEE");
         await waitForEnter();
@@ -65,10 +51,24 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
-
         // Perform the edit function
+        // Perform right-click on the specified element
+        const selector7 = 'div[data-id="AJC+8X/uU1MWWXEK"]'; // Replace with the appropriate selector
+        const title7 = '(3) Extrude Sketch(1.03) did not regenerate properly: Select a sketch plane.'; // Replace with the desired title
+        console.log('Right-clicking on the specified element.');
+        const editOptions7 = await performRightClickOptionByTitle(newPage, selector7, title7);
+        console.log(editOptions7);
+
+
+        console.log("GGGGGGGGGGGG");
+        await waitForEnter();
+        console.log("HHHHHHHHHH");
+
+
         console.log('performRightClickOptionByTitle')
-        editIntoSketchFunction(editOptions3, newPage);
+        editIntoSketchFunction(editOptions7, newPage);
+
+
 
         console.log("GGGGGGGGGGGG");
         await waitForEnter();
