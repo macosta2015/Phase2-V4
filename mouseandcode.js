@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 require('dotenv').config();
 
 const { launchBrowserAndNavigateToDocument } = require('./components/launchBrowserAndNavigate.js');
-const { performTest } = require('./components/newSketch.js');
+const { newSketch } = require('./components/newSketch.js');
 const { clickButtonByIndex } = require('./components/clickButtonByIndex.js');
 const copySketchFunction = require('./components/copySketchFunction.js');
 const pasteIntoSketchFunction = require('./components/pasteIntoSketchFunction.js');
@@ -23,10 +23,12 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const newPage = await launchBrowserAndNavigateToDocument(); // Ensure this returns a newPage object
 
         // NEW SKETCH
-        // await performTest(newPage);
+        await newSketch(newPage);
 
-        // Adding extrude function to the code
-        //ORIGINAL GOOD  const desiredIndex = 5;
+        console.log("AAAAAAAAAA");
+        await waitForEnter();
+        console.log("BBBBBBBBBB");
+
         const desiredIndex = 6;
         await clickButtonByIndex(newPage, desiredIndex);
 
